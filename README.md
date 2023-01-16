@@ -1,5 +1,5 @@
 # Classification
-
+库太大了传不上来，gitee地址https://gitee.com/shijingying/classification
 #### 介绍
 1.opencv中包含简单的opencv 人脸识别 opencv453
 
