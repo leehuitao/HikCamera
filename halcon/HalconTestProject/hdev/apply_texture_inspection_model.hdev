@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="main">
+<interface/>
+<body>
+<l>dev_update_off ()</l>
+<l>dev_close_window ()</l>
+<l>read_image (Image, 'D:/LHT/TestProject/classification/halcon/HalconTestProject/testimage/apply_texture_inspection/carpet_01.png')</l>
+<l>get_image_size (Image, Width, Height)</l>
+<l>NumImages := 7</l>
+<c>* Define the set of training images.</c>
+<l>TrainingImageIndices := [1,2]</l>
+<l>TextureModelFilename := 'texture_model_carpet'</l>
+<c>* </c>
+<c>* Initialize the visualization.</c>
+<l>dev_open_window_fit_size (0, 0, Width, Height, -1, -1, WindowHandle1)</l>
+<l>get_window_extents (WindowHandle1, Row, Column, WindowWidth, WindowHeight)</l>
+<l>set_display_font (WindowHandle1, 16, 'mono', 'true', 'false')</l>
+<l>dev_set_draw ('margin')</l>
+<l>dev_set_line_width (2)</l>
+<c></c>
+<l>create_texture_inspection_model ('basic', TextureInspectionModel)</l>
+<c>* </c>
+<c>* -------------------生成训练模型------------------------------</c>
+<l>for Index := 0 to |TrainingImageIndices| - 1 by 1</l>
+<l>    add_texture_inspection_model_image (Image, TextureInspectionModel, Indices)</l>
+<l>endfor</l>
+<c></c>
+<c>* </c>
+<l>set_texture_inspection_model_param (TextureInspectionModel, 'patch_normalization', 'weber')</l>
+<c>* </c>
+<l>Levels := [2,3,4]</l>
+<l>set_texture_inspection_model_param (TextureInspectionModel, 'levels', Levels)</l>
+<c>* </c>
+<l>train_texture_inspection_model (TextureInspectionModel)</l>
+<c>* </c>
+<l>write_texture_inspection_model (TextureInspectionModel, TextureModelFilename)</l>
+<c></c>
+<l>get_texture_inspection_model_param (TextureInspectionModel, 'novelty_threshold', NoveltyThreshold)</l>
+<c>* </c>
+<c>* Cause that debugging information is stored during the execution of</c>
+<c>* apply_texture_inspection_model.</c>
+<l>set_texture_inspection_model_param (TextureInspectionModel, 'gen_result_handle', 'true')</l>
+<c>* </c>
+<c>* --------------------------------------------------------</c>
+<l>dev_close_window ()</l>
+<l>WindowWidth := 320</l>
+<l>WindowHeight := 280</l>
+<c></c>
+<l>dev_open_window (WindowHeight + 50, WindowWidth / 2 + 8, 2 * WindowWidth, 2 * WindowHeight, 'black', WindowHandle4)</l>
+<l>set_display_font (WindowHandle4, 16, 'mono', 'true', 'false')</l>
+<c>* -------------------检测测试----------------------</c>
+<c></c>
+<l>read_image (TestImage, 'D:/LHT/TestProject/classification/halcon/HalconTestProject/testimage/apply_texture_inspection/carpet_03.png')</l>
+<c>* </c>
+<c>* Inspect the current image.</c>
+<l>apply_texture_inspection_model (TestImage, NoveltyRegion, TextureInspectionModel, TextureInspectionResultID)</l>
+<c>* Inspect debugging information.</c>
+<c>* The novelty score images can be used to fine tune the novelty thresholds individually.</c>
+<l>*get_texture_inspection_result_object (NovScoreImage, TextureInspectionResultID, 'novelty_score_image')</l>
+<l>*get_texture_inspection_result_object (NovRegion, TextureInspectionResultID, 'novelty_region')</l>
+<c>* 三种等级的结果</c>
+<c>* Display the results for the single scales</c>
+<l>*count_obj (NovScoreImage, Number)</l>
+<c></c>
+<c>* Display results.</c>
+<l>dev_display (TestImage)</l>
+<l>dev_set_line_width (2)</l>
+<l>dev_set_color ('red')</l>
+<l>dev_display (NoveltyRegion)</l>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>

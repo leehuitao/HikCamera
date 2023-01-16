@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="highpass">
+<interface>
+<io>
+<par name="image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="resultImage" base_type="iconic" dimension="0"/>
+</oo>
+<oc>
+<par name="result" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<xb>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</xb>
+<docu id="highpass">
+<parameters>
+<parameter id="image"/>
+<parameter id="result"/>
+<parameter id="resultImage"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

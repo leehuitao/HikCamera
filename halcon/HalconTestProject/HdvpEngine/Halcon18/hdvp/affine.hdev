@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="main">
+<interface/>
+<body>
+<l>Y_final:=[]</l>
+<l>X_final:=[]</l>
+<c>*找出背景板</c>
+<l>read_image (Image1, 'D:/affine2.jpeg')</l>
+<l>rgb1_to_gray (Image1, Image)</l>
+<l>get_image_size (Image, Width, Height)</l>
+<l>gen_rectangle1 (Rectangle, 0, 0, Height, Width)</l>
+<l>gray_histo (Rectangle, Image, AbsoluteHisto, RelativeHisto)</l>
+<l>histo_to_thresh (RelativeHisto, 30, MinThresh, MaxThresh)</l>
+<l>tuple_length (MinThresh, Length_MinThresh)</l>
+<l>threshold (Image, Region_light, MinThresh[Length_MinThresh-1], MaxThresh[Length_MinThresh-1])</l>
+<l>fill_up (Region_light, Region_light_FillUp)</l>
+<l>connection (Region_light_FillUp, ConnectedRegions_light)</l>
+<l>count_obj (ConnectedRegions_light, Number_ConnectedRegions_light)</l>
+<l>area_center (ConnectedRegions_light, Area_ConnectedRegions_light, Row_ConnectedRegions_light, Column_ConnectedRegions_light)</l>
+<l>tuple_sort_index (Area_ConnectedRegions_light, Area_ConnectedRegions_light_Indices)</l>
+<l>select_obj (ConnectedRegions_light, RegionFillUp_light, Area_ConnectedRegions_light_Indices[Number_ConnectedRegions_light - 1] + 1)</l>
+<c>*-----------------------start 这一部分如果项目变更需要修改的----------------------------</c>
+<c>*找区域内轮廓 （第一次）</c>
+<l>rgb1_to_gray (Image, GrayImage)</l>
+<l>median_image (GrayImage, ImageMedian, 'circle', 21, 'mirrored')</l>
+<l>emphasize (ImageMedian, ImageEmphasize, 10, 10, 2)</l>
+<l>highpass_image (ImageEmphasize, Highpass, 21, 21)</l>
+<l>threshold (Highpass, Region, 128, 255)</l>
+<l>union1 (Region, RegionUnion)</l>
+<l>closing_rectangle1 (RegionUnion, RegionClosing4, 20, 20)</l>
+<l>fill_up (RegionClosing4, RegionFillUp1)</l>
+<c>*缩小一下区域 去掉最外部的边框</c>
+<l>zoom_region (RegionFillUp1, RegionZoom, 1, 1)</l>
+<l>area_center (RegionFillUp1, Area, Row, Column)</l>
+<l>area_center (RegionZoom, Area1, Row1, Column1)</l>
+<l>move_region (RegionZoom, RegionMoved, Row - Row1, Column - Column1)</l>
+<l>reduce_domain (Highpass, RegionMoved, ImageReduced)</l>
+<l>threshold (ImageReduced, Region, 132, 255)</l>
+<l>connection (Region, ConnectedRegions)</l>
+<l>select_shape (ConnectedRegions, SelectedRegions, 'area', 'and', 3583.22, 20000)</l>
+<l>count_obj (SelectedRegions, Number)</l>
+<l>for Index := 1 to Number by 1</l>
+<l>    select_obj (SelectedRegions, ObjectSelected, Index)</l>
+<l>    fill_up (ObjectSelected, RegionFillUp)</l>
+<l>    smallest_rectangle2 (RegionFillUp, Row3, Column3, Phi, Length1, Length2)</l>
+<c></c>
+<l>    vector_angle_to_rigid (Row3, Column3, Phi, Row3, Column3, Phi, HomMat2D)</l>
+<c></c>
+<l>    hom_mat2d_rotate (HomMat2D, -Phi, Row3, Column3, HomMat2DRotate)</l>
+<l>    affine_trans_image (Image1, ImageAffineTrans, HomMat2DRotate, 'constant', 'false')</l>
+<l>    affine_trans_region (RegionFillUp, RegionAffineTrans, HomMat2DRotate, 'nearest_neighbor')</l>
+<l>endfor</l>
+<c></c>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>

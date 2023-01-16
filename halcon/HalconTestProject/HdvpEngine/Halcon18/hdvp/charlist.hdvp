@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="charlist">
+<interface>
+<io>
+<par name="image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="resultImage" base_type="iconic" dimension="0"/>
+</oo>
+<oc>
+<par name="result" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<xb>3T6DDQlnKwpY1yzvt6ckegOD/b832mfHj2Hl9jLAkfCmvL8naElTfttG/9S/LXbn96AVKO/w8c7KAZPdqmNGPiEcYM28UqaidxxP5WgyyF6rAk+PSkI1jdqMvuaB8PfYYLZuHmBnleAJN9u6oCg4oumIRolvrJrVcydcjiw+5yMCMvfeEW1ylRx7RbTgvnexoeotDqgftzBGAA0ycw5Vdj6KTJ2dzSXmO4bW9lk8a8ACBG5RozMiFGXpc51+DnnsTquZsssqgbRSHZqQuh8ZS852dbEPj5jJtMW0DpFqC/lhhbDznX5+Gbr7/D7kI73j2JcaJxO70WdaDAZfHI8jBSDTK/9uLRTn+oapeWEzpZ226xLkFTeEMj993KUGKX0oNVBL4z/yRdJsEY7OGP6/R1Ocsk6CHopp3DQCSV5iYoPUYnEYB1fZCXs+IGQBc0/ZiY/vb02dTkViMqw5dn40KSb/oaorgQGPHO13InbV5xOZGIGqASxGPnBF3uIaa21vK8d4qjB8ftP0XUJAClTYWzt60Julil5QLW/wsTrEZm2mcvzcQ12YWsjM/s00SHeYofjVNeRsLgO0Ea70okeaT4YlkVzKvQm14ukH6GgTXJDYs0CtysJpeW4ttMRB7QqFOeTrjq2Z24T70bqKmwiEUUOFomwrXrcBFBEPlMYSbCJWylae+hmY5LzVXwCdocL3Zt3Hlg4s+pEdv0ok9otYn+3lia7LhXB7D/+LGs6FYgkwaa51x0IZyqbrZ5Y4Ja0lpniqtwm3bQJx9TXwvHjFN0h7I7C7wUq3PIwP6jU3nQZT50g4jtFF/pYe1GonMmOJUGFAH/fu07BDxuID5seEml9XIMn5Pb/gf7MuU7QexlWZwlHKIWh1xPHM6GoRQWmHkO1bapwfO5EJohYMedqKMFJ9olkYYEphUZAyztYsR0OiVgappu0jcZb/MkmEBPXtXoqIt61STEZTuW7fW8RZ6W3Wkb1y9WcpF70D22N1Nt8b/M5z3X3yIaumVLtw+T+pTPZ4d4VA5c57Cx+1KjfkbDG/EElb8I/aETjDiXm6YImW4Nlr+NQGA5IVjd6Luidqj89K1pRmBWSxqTgsRsw3ZEJrGPtNThtrMyhCKDs/p8PvXxn5QXRCkHTCH5RXn5uQSRuyLohji+RpLXdJW05PExYY51WKAZo34Kzy1SeixG2feVyuaX/Cs9Okc0Vw+k8x5F+eeCfZ/bhIhFyZrGYlvOiPV76TN2uSFmZDYGsGKrAswEsjR1rQLoOOhAa/RrCwSemuQg06QtQoiQnn3YqDhu7BDaShq4YZXLdBxUAcPB1gS35+iNqYTrSU0j4TbxIfhPcPsQtMM5CYnQYvmdSm4pCSpDiyOBzvmUUea4ahTkLrRIP/kHDxeE+QqWaXCDC1mI6mJB3SaYm9kaFiKZ578unDNAgPn5ea805w2vtLKkF+n4YOdxCiceODruKsoBauiaNwH8nn2W9DMbScqUekA/QNh6lb4uJ+jRqj6ybWjwW1ItIVWq5OKYRah1mn70K6InjSJ3h+SlLiNyfbcech4sBy0ZDl6gXJKNjn3QtFMBbtQgZ5KxWlVvznmM3xpUUxkjq5askYaKslmyTVf+KoEZ6acVRMbZ7rnLxLZguFsKw</xb>
+<docu id="charlist">
+<parameters>
+<parameter id="image"/>
+<parameter id="result"/>
+<parameter id="resultImage"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

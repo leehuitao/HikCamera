@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="main">
+<interface/>
+<body>
+<l>read_image (Image, 'C:/Users/leehuitao/Desktop/correct.bmp')</l>
+<c>*增强一下对比度</c>
+<l>emphasize (Image, ImageEmphasize, 21, 21, 3)</l>
+<c>*高频分量</c>
+<l>highpass_image (ImageEmphasize, Highpass, 21, 21)</l>
+<c>*阈值提取边缘</c>
+<l>threshold (Highpass, Regions, 0, 45)</l>
+<l>connection (Regions, ConnectedRegions)</l>
+<l>fill_up (ConnectedRegions, RegionFillUp)</l>
+<l>select_shape (RegionFillUp, SelectedRegions, ['circularity','area'], 'and', [0.9,4127.36], [1,13561.3])</l>
+<l>union1 (SelectedRegions, RegionUnion)</l>
+<c>*生成一个有角度的矩形</c>
+<l>smallest_rectangle2 (RegionUnion, Row, Column, Phi, Length1, Length2)</l>
+<l>gen_rectangle2 (Rectangle, Row, Column, Phi, Length1, Length2)</l>
+<c>*向外矩形膨胀包含整个面板</c>
+<l>dilation_rectangle1 (Rectangle, RegionDilation, 211, 211)</l>
+<l>reduce_domain (Image, RegionDilation, ImageReduced)</l>
+<c>*获取角度</c>
+<l>orientation_region (RegionDilation, Phi)</l>
+<l>area_center (RegionDilation, Area, Row, Column)</l>
+<c>*创建变换模型</c>
+<l>vector_angle_to_rigid (Row, Column, Phi, Row, Column, rad(90), HomMat2D)</l>
+<c>*获得仿射后的图像和矩形</c>
+<l>affine_trans_image (ImageReduced, ImageAffineTrans, HomMat2D, 'constant', 'false')</l>
+<l>affine_trans_region (RegionDilation, RegionAffineTrans, HomMat2D, 'nearest_neighbor')</l>
+<l>reduce_domain (ImageAffineTrans, RegionAffineTrans, ImageReduced1)</l>
+<l>dev_clear_window ()</l>
+<l>dev_display (ImageReduced1)</l>
+<c></c>
+</body>
+<docu id="main">
+<parameters/>
+</docu>
+</procedure>
+</hdevelop>

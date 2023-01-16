@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="code">
+<interface>
+<io>
+<par name="image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="resultImage" base_type="iconic" dimension="0"/>
+</oo>
+<oc>
+<par name="result" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<xb>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</xb>
+<docu id="code">
+<parameters>
+<parameter id="image"/>
+<parameter id="result"/>
+<parameter id="resultImage"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

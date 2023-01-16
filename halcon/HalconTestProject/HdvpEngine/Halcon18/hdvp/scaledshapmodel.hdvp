@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="scaledshapmodel">
+<interface>
+<io>
+<par name="image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="resultImage" base_type="iconic" dimension="0"/>
+</oo>
+<oc>
+<par name="result" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<xb>gKV4xC8MAFcbvzjuB5cSH4w/zKNIeUTrpXS39vS9/yPVIaC/kjJ6iW+kxnojdllIH1IpC4WUmlTOC4e/k6lJe8fGyhcwv/leusqpVr6bpKyqJnCuMBtaA9bSV2E6cD3zBc3HAIEBfql7GPQbKwhLORMPj341z9VHoq5ilkCTxMZPIJcfHWuKR+EyLObRIVz6YCnSmI8yK6Oqf/JQmoIay6g6sKHOPa9INNDR+wAnMTHILtw9DXfo7p0q5WaV3hTFSBCWJdBx4aay5VNmHKzgaz45B/HckL377IrdLBgp/Gpi9ubOrI3c5ZFEUF51OhnV0B3oxUpCCEv+3Zjgw/Q6PVYraURh4IuW+fogzfsJd0IdXoeo7WJmuQBrd3rAg2TFG2BmRhuN8s01JDJhd62kWAeS4+P4St1gxy+t1Q9jd5s+xMYcebUwaZ6vHE3gOBlC1z06qUkYrB52+F3ZznBu1jLodbp+rEyKpqjqQS3/e5b52z9B4eBcJrMUnbwh3KzsACnxBKV4kLUUvFtrPNA0Lw8It9uHSRhv64kMcb3s0T87v1QS/kVR0xgkNlAZZPsm5dtf+qEdhUgJlfTvZPeJ4drf0xY9rCDbsOamcaF+HCu9URwfbMidEb2cjDUhblhR6bzIdaeNPMe016rG8GiOZv1wEC5yWaLBvISWvLlOaEMmB3AMEK1qmPABEDJ3HN9SvifmgNud0er5mPEz45izLoPd9j2O+xd3sKF7BcQBN/yEGVRYg+8LHiu0aN10FegqqKF84iugbuPT8JnGLMkoF8Q+SWz8jlHNaFU0NGBhFGddOdDSZu5o/q+2RRNGIsRg8SWbYMzQT3ffd2wbze7b0d5UUPrV2qzdxKv3PZuxJWFu88FlJzwB6t1mVQPwHP0hKb+k+e5RyAlOGFyjWmeZnoVcJiLNRrFdu8/xEW/kXL4eo5bNlcJpfrdXa5bfuLdRu9Ot2jBo2N5eTuf+Sf7cEQx2U0kjv9hC5148X/9Z3L8bc8sAn9VGjN3S1lda2ZlMYX/jsjjXw8qjt3P/+edbAGHeVQnmWaMJ3R7WGiKK6kdXF3QBuuEW+46YkXiwUVTYUff8JrfOEvcPWCnvVYB0Mi4VpXbKp+p6gPmQO7gE3PX8ROBkl9hszU1qYpw20RIlziVRVhNMWUpq8iEnjzvco9MPd60ltgmHOHpApu6bTi6WTXafTMQMFX4ILiU/DU9LDqg8GVomyjQ82beClvg0J9oVtnrz7Azz7VXGQLj/Zm0tD4RzU5VSQyAkJF3j0OjfopNJaI/6Cs2iEZtza6GzmXKGjvL0ETXmTf01AxE3kRVbT+j19W4yNzc+RITCUJ8otME/mK1PNU0pvUwBpTzipafuDCLqKX7fQ6L4rhLwl0pDOTt+Tc1vSPeU8CAI5bqUhBQsikzYYfYeTWKWEs7DroXYOC+EGWAjZ+TZQYDHmWEkQirZOiQK41j4XU9SHgtQaeXHSqDqImRLmbO6tPWPihy7S9uCtJ8dI4Jf9Sd0zyE9QMKPTtusorAn3psr4IOyBRav0d9JsQG/9yT+rEyYBz8T6Q5D5gvYwoghNn3vsiyt6DvKZf5Ds+cxZJXN5LzR1WmKdbm6kv0xmVorq+uwPAOFbdxnM7gwiEzBne7GS5sQwhq7LQ4xJiYtBMFEmX4oG4EvRYirjBRSGHN7lpjSPHynn7KAU4sKkDwbShDCN1SQv2ONLGmZZTCkaX2WMMvQLfFaa60yPJwakJeCKLdj5WEXlwExc3wQsl+9nXagQ6HNiW2HK34c9pBzQUU0xkNzfmwADuRZpeX3idkvO38RrgG3D0R1CePN6+PNXGgYp3VfOXFnXUZbkCEsdUewuSUu</xb>
+<docu id="scaledshapmodel">
+<parameters>
+<parameter id="image"/>
+<parameter id="result"/>
+<parameter id="resultImage"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

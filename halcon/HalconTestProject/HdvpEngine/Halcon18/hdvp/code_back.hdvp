@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.2" halcon_version="18.11.0.1">
+<procedure name="code_back">
+<interface>
+<io>
+<par name="image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="resultImage" base_type="iconic" dimension="0"/>
+</oo>
+<oc>
+<par name="result" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<xb>ubBY6z8vHKp3N71NK/qMXxh4UXV7fN1XRmpu0g6a/GawtvIgUdBA8lO6jX8EW/PdfaO8NNhvJBdnF5GBVKxfiRG2aFLBQKb6iURYYuO/qpIeptiNEPxvwPezIatF1cIRgW5+SCajYkAbXPPtd6pYgSy5UAzJ1JtWIvGzZJyrl1OqNcTQsf2vD9WMbUBorbBMSlX+whnep/3doVZOtiSV2OuaKk+Muq1uFKHSkcTJFQqU4KV8aMEKjorUmq0Icusu9qKo6FFMWTOr/HwMek9bZ9gdMB1JSXQ48rnyBme73j2xw8+nDf1hQ9VmB/FG+hJdBs3cwbhFqGHHZFJmrNKNYxJ0vH3XwdeZT7SN+lxC5JuJpJ/n3+dlR068+o/q/G6O23r7UqBIJvKT0NDwFcyuzds6yQn9Hy2EIPxXfP1V+anSnHoKcNbYGAmFzJUnqn3QhgC+sqcTaxaxo3AKH7rfgz5mTcUlJOvjAhR2AvR6zODE5Sn+nQZd4EyxXpQ1DAm0qdK7bB7mu7FcRd2G/jUsNwSzXt44AVTk51amt7VtGa8CJjUSUq3jbv5STQehRw31jNSvlUSNHfOoc7GhrsdBMF12XsebRej5TudI0COCqxdz2kKj7U+nSgCXLD2sMEMv83m0Edk8BDz5XM2yv/Z1KCZo/Wtuh2LRgN8CAyKPJA3X1KGexy10oqvAb+WD8NMVVNSVrPufxB5yBstXB37MxJ74AZDASJRZUCU3exXb/7J1H2yDOsnjYhlS/LIZ3VscwBh1IaqhHv4jEL/g+ptXRUBE0EK+IDN8ZnOskpsuWqV0mzCmmCMjHe0Tx3F2SvPCqEsKDyglMp+0947qMHuFrnlwcdOdacAf2d/OuWvnPm92+fYDHuy6BKow4cv6Fep+tRxMvjP6DlTXPOHj2lXSTPoSHo+DZE9DKOWgVbaQxLq95zrXsWYt6sbXgoy+tpX+rCMhjNkcDlcRNqKv6w6kUuQQXJonpqlp++nMqOJT3oYIWV1d11dPmiTVa91U4yceZXb/mlrkQYFcdy3kfLs6QjM1sk2Vc0qj6ErUVysdZ3XnudMctn+NW1N6hXM6D8uwFPt+OyCnPHqQAE/aKi/RmeMXTtGlKsJOWhqKSw4/MF+UXG35Es8tsmPImPLKuXOds+961wgX/W6sIoT8G4xdvq23HaHFtH9s/WVHObPPrq+AxS0XGU35R7mtVmWKZ0bOVjbOkp5/gfz4msogxC9UJ8JZa9Q9Gaw97BSJ+Z+ukW4tURcRoZlvsSV6uTgikX3QdU8PIOfH+0rwPGFTRES9B8/bPYIaWj6gVe6bi6q+UqJ3xITGDsmh0hSnVU/MVv6mSd1ganuKVrJw79S/Gs34bZ1TYiO3f67J7M2RQRrKBzYEmTxhEIZStP3XeoDnFqbHzj3MDn+nvjJ+kZjfVFW9WW8k+qo/qC9NJ8lMKuCEvdnJInN1O6xdjkFdjBt3t7q1yrmj0TU9L05A7JmVJyZuEIWrveldUfRcugQv69qlOQv4oiBp9smE/Eg2dqRIPup3dLVHylWTMirpN1qvmik9+4AQ7NGVH0o3J1CgyacoDZcLzBb5oQe7M3REVhtuxctC01irj+xSVug</xb>
+<docu id="code_back">
+<parameters>
+<parameter id="image"/>
+<parameter id="result"/>
+<parameter id="resultImage"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>
